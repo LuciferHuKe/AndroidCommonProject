@@ -1,0 +1,6 @@
+<resources>
+
+    <!-- 提示信息 -->
+    <string name="base_remaind_loading">加载中...</string>
+
+</resources>
