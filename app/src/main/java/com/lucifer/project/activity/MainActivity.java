@@ -1,7 +1,6 @@
 package com.lucifer.project.activity;
 
 import android.view.View;
-import android.widget.TextView;
 
 import com.lucifer.common.activity.BaseFragmentActivity;
 import com.lucifer.common.model.EventMessage;
@@ -12,15 +11,16 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 /**
- * Created by lucifer on 16/8/24.
+ * Created by lucifer on 16/8/26.
+ *
+ * 主界面
  */
-public class StartActivity extends BaseFragmentActivity {
+public class MainActivity extends BaseFragmentActivity {
 
-    private TextView tv_start;
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_start;
+        return R.layout.activity_main;
     }
 
     @Override
@@ -32,20 +32,17 @@ public class StartActivity extends BaseFragmentActivity {
     @Override
     protected void initView() {
 
-        tv_start = (TextView) findViewById(R.id.tvStartMsg);
-
-        switchActivity(MainActivity.class);
-
     }
 
     @Override
     protected void initListener() {
 
-    }
-
-    @Override
-    public void onClick(View view) {
-
+        int[] resIds = {
+                R.id.btnMainSend
+        };
+        for (int id : resIds) {
+            findViewById(id).setOnClickListener(this);
+        }
     }
 
     @Override
@@ -55,17 +52,25 @@ public class StartActivity extends BaseFragmentActivity {
         EventBus.getDefault().unregister(this);
     }
 
-    @Subscribe
-    public void onEventMainThread(EventMessage message) {
+    @Override
+    public void onClick(View view) {
 
-        switch (message.getAction()) {
-            case ConstantValue.EVENT_ACTION_START: {
-                tv_start.setText("HELLO WORLD");
+        switch (view.getId()) {
+            case R.id.btnMainSend: {
+                EventMessage message = new EventMessage();
+                message.setAction(ConstantValue.EVENT_ACTION_START);
+                EventBus.getDefault().post(message);
+                finish();
             }
             break;
             default:
                 break;
         }
+    }
+
+    @Subscribe
+    public void onEventMainThread(EventMessage message) {
+
     }
 
 }

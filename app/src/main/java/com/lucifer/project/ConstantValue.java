@@ -5,5 +5,8 @@ package com.lucifer.project;
  */
 public class ConstantValue {
 
+    // ------------------------------- EventBus Message Action ------------------------------
+
+    public static final String EVENT_ACTION_START = "EVENT_ACTION_START";
 
 }

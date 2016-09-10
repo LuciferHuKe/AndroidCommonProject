@@ -12,7 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.lucifer.common.R;
+import com.lucifer.common.model.EventMessage;
 import com.lucifer.common.view.ProgressHUD;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by lucifer on 16/8/23.
@@ -37,6 +40,9 @@ public abstract class BaseFragment extends Fragment
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // 注册组件通信
+        registerEventBus();
     }
 
     @Nullable
@@ -76,6 +82,9 @@ public abstract class BaseFragment extends Fragment
 
         // 提示信息对话框消失
         dismissProgressHUD();
+
+        // 解除注册的组件通信
+        unregisterEventBus();
     }
 
     @Override
@@ -240,6 +249,17 @@ public abstract class BaseFragment extends Fragment
             mProgressHUD.dismiss();
     }
 
+    /**
+     * 发送组件消息
+     * @param message
+     */
+    public void sendEventMessage(EventMessage message) {
+
+        if(null != message) {
+            EventBus.getDefault().post(message);
+        }
+    }
+
     // --------------------------------------- Protect Method -----------------------------------
 
     // 获取当前Activity的布局文件资源id
@@ -255,5 +275,21 @@ public abstract class BaseFragment extends Fragment
     protected abstract void initListener();
 
     // --------------------------------------- Private Method -----------------------------------
+
+    /**
+     * 注册组件通信
+     */
+    private void registerEventBus() {
+
+        EventBus.getDefault().register(this);
+    }
+
+    /**
+     * 解除注册的组件通信
+     */
+    private void unregisterEventBus() {
+
+        EventBus.getDefault().unregister(this);
+    }
 
 }
