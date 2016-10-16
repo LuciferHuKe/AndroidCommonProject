@@ -2,15 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tvStartMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="@dimen/x25"
-        android:textColor="@android:color/black"
-        android:textSize="@dimen/txt_size_9" />
+    <RelativeLayout
+        style="@style/BaseNaviRL">
+
+        <TextView
+            style="@style/BaseNaviTitleTxt"
+            android:text="首页"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lyStartUI"
+                style="@style/BasePullItemLY">
+
+                <TextView
+                    style="@style/BaseTitleTV"
+                    android:text="UI组件"/>
+            </LinearLayout>
+
+            <View
+                style="@style/BaseHorizontalLine"/>
+
+            <LinearLayout
+                android:id="@+id/lyStartNetwork"
+                style="@style/BasePullItemLY">
+
+                <TextView
+                    style="@style/BaseTitleTV"
+                    android:text="网络通信"/>
+            </LinearLayout>
+
+            <View
+                style="@style/BaseHorizontalLine"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
 
 </LinearLayout>

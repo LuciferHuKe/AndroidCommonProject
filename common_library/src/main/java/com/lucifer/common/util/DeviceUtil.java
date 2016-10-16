@@ -1,4 +1,4 @@
-package com.lucifer.common.uitl;
+package com.lucifer.common.util;
 
 /**
  * Created by lucifer on 16/8/26.

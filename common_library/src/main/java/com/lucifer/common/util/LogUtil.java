@@ -1,4 +1,4 @@
-package com.lucifer.common.uitl;
+package com.lucifer.common.util;
 
 import android.text.TextUtils;
 import android.util.Log;

@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="base_navi_bg">#2F65CA</color>
+    <color name="base_navi_bg_press">#27ADF5</color>
+
+    <color name="base_pull_item_normal">#FFFFFF</color>
+    <color name="base_pull_item_press">#E6E6E6</color>
+
+    <color name="lineBg">#E6E6E6</color>
+    <color name="lineDarkBg">#4C4D4E</color>
+
 </resources>

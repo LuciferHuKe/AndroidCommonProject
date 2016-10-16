@@ -1,1 +1,1 @@
-include ':app', ':common_library', ':ffmpeg', ':ffmpeg'
+include ':app', ':common_library', ':ffmpeg', ':ffmpeg', ':app_degou'
