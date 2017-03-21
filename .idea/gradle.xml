@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app_degou" />
             <option value="$PROJECT_DIR$/common_library" />
             <option value="$PROJECT_DIR$/ffmpeg" />
+            <option value="$PROJECT_DIR$/servermodel" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

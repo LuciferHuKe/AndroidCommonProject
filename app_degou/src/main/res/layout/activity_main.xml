@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Tabbar Content -->
+    <FrameLayout
+        android:id="@+id/flMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lyMainBottom"></FrameLayout>
+
+    <!-- Tabbar Bottom -->
+    <LinearLayout
+        android:id="@+id/lyMainBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View style="@style/BaseLineHorizontal" />
+
+        <RadioGroup
+            android:id="@+id/rgMainTabbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical">
+
+            <RadioButton
+                android:id="@+id/rbMainHome"
+                style="@style/MainTabbarRB"
+                android:drawableTop="@drawable/sel_tabbar_home"
+                android:checked="true"
+                android:text="@string/main_tab_home"/>
+
+            <RadioButton
+                android:id="@+id/rbMainActive"
+                style="@style/MainTabbarRB"
+                android:drawableTop="@drawable/sel_tabbar_active"
+                android:text="@string/main_tab_active"/>
+
+            <RadioButton
+                android:id="@+id/rbMainCategory"
+                style="@style/MainTabbarRB"
+                android:drawableTop="@drawable/sel_tabbar_category"
+                android:text="@string/main_tab_category"/>
+
+            <RadioButton
+                android:id="@+id/rbMainShopcart"
+                style="@style/MainTabbarRB"
+                android:drawableTop="@drawable/sel_tabbar_shopcart"
+                android:text="@string/main_tab_shopcart"/>
+
+            <RadioButton
+                android:id="@+id/rbMainMine"
+                style="@style/MainTabbarRB"
+                android:drawableTop="@drawable/sel_tabbar_me"
+                android:text="@string/main_tab_mine"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>

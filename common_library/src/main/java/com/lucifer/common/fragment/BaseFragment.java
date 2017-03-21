@@ -40,9 +40,6 @@ public abstract class BaseFragment extends Fragment
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // 注册组件通信
-        registerEventBus();
     }
 
     @Nullable
@@ -82,9 +79,6 @@ public abstract class BaseFragment extends Fragment
 
         // 提示信息对话框消失
         dismissProgressHUD();
-
-        // 解除注册的组件通信
-        unregisterEventBus();
     }
 
     @Override

@@ -1,0 +1,14 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="base_nav_height">@dimen/y110</dimen>
+    <dimen name="base_line">@dimen/y1</dimen>
+
+    <dimen name="base_padding">@dimen/x24</dimen>
+
+    <!-- Login Internal -->
+    <dimen name="login_vertical_padding">@dimen/y26</dimen>
+
+</resources>

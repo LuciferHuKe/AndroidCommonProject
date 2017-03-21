@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">德购网</string>
+
+    <string name="main_tab_home">首页</string>
+    <string name="main_tab_active">活动</string>
+    <string name="main_tab_category">分类</string>
+    <string name="main_tab_shopcart">购物车</string>
+    <string name="main_tab_mine">我</string>
+
+    <!-- Login -->
+    <string name="login_user_hint">请输入您的用户名</string>
+    <string name="login_pwd_hint">请输入您的登录密码</string>
+    <string name="login_btn">登 录</string>
+    <string name="login_content">提示信息：尊敬的用户您好</string>
+
+</resources>

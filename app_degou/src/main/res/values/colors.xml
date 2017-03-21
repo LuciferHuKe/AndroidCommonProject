@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="base_navi_bg">#2F65CA</color>
+    <color name="base_navi_bg_press">#27ADF5</color>
+    <color name="base_pull_item_normal">#FFFFFF</color>
+    <color name="base_pull_item_press">#E6E6E6</color>
+
+    <color name="main_tabbar_txt_normal">#838282</color>
+
+    <color name="lineBg">#E6E6E6</color>
+    <color name="lineDarkBg">#4C4D4E</color>
+
+    <color name="login_edit_url">#ff0099cc</color>
+
+    <!-- Login Color -->
+    <color name="login_input_edt">#2B2B2B</color>
+    <color name="login_line">#808080</color>
+    <color name="login_btn_press">#EC482E</color>
+    <color name="login_btn_normal">#FF6600</color>
+    <color name="login_btn_unfocus">#BBBBBB</color>
+
+
+</resources>
