@@ -65,6 +65,13 @@
 
         </activity>
 
+        <!-- 注册服务 -->
+        <service
+            android:name=".network.socket.TcpDataService"
+            android:enabled="true">
+
+        </service>
+
     </application>
 
 </manifest>
